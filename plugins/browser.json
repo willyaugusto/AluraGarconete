@@ -12,6 +12,12 @@
         },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "org.willyaugusto.garconapp"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "org.willyaugusto.garconapp"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "org.willyaugusto.garconapp"
         }
     },
     "dependent_plugins": {}

@@ -1,0 +1,25 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "org.willyaugusto.garconapp"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "org.willyaugusto.garconapp"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "org.willyaugusto.garconapp"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "CAMERA_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "org.willyaugusto.garconapp"
+        }
+    },
+    "dependent_plugins": {}
+}

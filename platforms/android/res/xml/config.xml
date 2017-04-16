@@ -8,11 +8,18 @@
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="StatusBar">
+        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="BarcodeScanner">
+        <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
+    </feature>
     <name>Garçonete Só de Cenoura</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
-    <author email="willyaugusto@gmail.org" href="https://www.linkedin.com/in/willyaugusto/">
+    <author email="willyaugusto@gmail.com" href="https://www.linkedin.com/in/willyaugusto/">
         Willy Augusto
     </author>
     <icon src="resources\android\icon\drawable-xhdpi-icon.png" />
@@ -34,4 +41,5 @@
     <preference name="BackgroundColor" value="0xF2F2F2FF" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
+    <preference name="StatusBarBackgrounColor" value="#E86C13" />
 </widget>
