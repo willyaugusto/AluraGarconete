@@ -7,6 +7,9 @@
     <author email="willyaugusto@gmail.com" href="https://www.linkedin.com/in/willyaugusto/">
         Willy Augusto
     </author>
+
+    <access origin="http://cozinhapp.sergiolopes.org"/>
+    
     <preference name="Orientation" value="portrait" />
     <preference name="Fullscreen" value="false" />
     <preference name="BackgroundColor" value="0xF2F2F2FF" />

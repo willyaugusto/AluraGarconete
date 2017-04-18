@@ -1,8 +1,8 @@
-$('.collection-item').on('click', function(){
+$('.collection-item').on('click', function () {
 
     var $badge = $('.badge', this);
 
-    if ($badge.length == 0){
+    if ($badge.length == 0) {
         $badge = $('<span class="badge brown-text">0</span>').appendTo(this);
     }
 
@@ -10,16 +10,16 @@ $('.collection-item').on('click', function(){
 
 });
 
-$('badge').on('click', function(){
+$('badge').on('click', function () {
     var nomeProduto = this.firstChild.textContent;
     Materialize.toast(nomeProduto + ' adicionado', 1000);
 });
 
-$('#confirmar').on('click', function(){
-    
+$('#confirmar').on('click', function () {
+
     var texto = '';
 
-    $('.badge').parent().each(function(){
+    $('.badge').parent().each(function () {
         var produto = this.firstChild.textContent;
         Materialize.toast(produto + ' adicionado', 1000);
 
@@ -33,12 +33,45 @@ $('#confirmar').on('click', function(){
 
 $('.modal-trigger').leanModal();
 
-$('.collection').on('click', '.badge', function(){
+$('.collection').on('click', '.badge', function () {
     $(this).remove();
     return false;
 });
 
-$('.acao-limpar').on('click', function(){
+$('.acao-limpar').on('click', function () {
     $('#numero-mesa').val('');
     $('.badge').remove();
 });
+
+$(".scan-qrcode").on('click', function () {
+    cordova.plugins.barcodeScanner.scan(
+        function (result) {
+            if (result.text) {
+                Materialize.toast('Mesa ' + result.text, 2000);
+                $('#numero-mesa').val(result.text);
+            }
+        },
+        function (error) {
+            Materialize.toast('Erro ' + error, 2000, 'red-textcor');
+        }
+    );
+});
+
+$(".acao-finalizar").on('click', function(){
+    $.ajax({
+        url: 'http://cozinhapp.sergiolopes.org/novo-pedido',
+        data: {
+            mesa: $('#numero-mesa').val(),
+            pedido: $('#resumo').text()
+        },
+        success: function(dados) {
+            Materialize.toast(dados, 2000);
+
+            $('#numero-mesa').val('');
+            $('.badge').remove();
+        },
+        error: function(erro) {
+           Materialize.toast(erro.responseText, 3000, 'red-text');
+        }
+    })
+})

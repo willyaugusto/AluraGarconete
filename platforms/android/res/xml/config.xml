@@ -17,11 +17,12 @@
     </feature>
     <name>Garçonete Só de Cenoura</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Aplicação de teste e estudo do Cordova
     </description>
     <author email="willyaugusto@gmail.com" href="https://www.linkedin.com/in/willyaugusto/">
         Willy Augusto
     </author>
+    <access origin="http://cozinhapp.sergiolopes.org" />
     <icon src="resources\android\icon\drawable-xhdpi-icon.png" />
     <icon density="ldpi" src="resources\android\icon\drawable-ldpi-icon.png" />
     <icon density="mdpi" src="resources\android\icon\drawable-mdpi-icon.png" />
